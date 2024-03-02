@@ -1,0 +1,72 @@
+/* 左侧导航栏的样式 */
+.aside{
+     width:200px;
+}
+.aside-list {
+    position:fixed;
+    left:0;
+
+}
+.aside .el-menu {
+    height: 100vh;
+
+}
+/* 字体图标 */
+.aside i {
+    font-size: 24px;
+    font-weight: 500px;
+    margin-right: 5px;
+}
+.aside .el-radio-button__inner {
+    border: none;
+    font-size: 20px;
+}
+/* 页面头部 */
+.el-header {
+    min-width: 1280px;
+}
+.headerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width:1200px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+    padding: 10px 0;
+}
+.headerNav  img{
+    width: 100%;
+    height:60px;
+
+}
+
+.header-search {
+    flex:1;
+    margin:0 10rem;
+}
+/* 按钮颜色 */
+.headerNav .el-input-group__append {
+    background-color: var(--el-color-primary);
+    color:#fff
+}
+.header-right .el-link {
+    margin: 0 20px;
+}
+/* 伪类选择器：可以用来选择获取焦点的元素，当鼠标移上去后取消黑色边框 */
+.el-dropdown-link:focus{
+    outline:none;
+}
+
+/* 区域展示部分 */
+.searchlist {
+    width:1200px;
+    display:grid;
+    grid-template-columns: repeat(5,auto);
+}
+.searchlist-item {
+    border:1px solid #dadada;
+    margin-left: -1px;
+}
