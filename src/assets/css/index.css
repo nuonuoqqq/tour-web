@@ -1,15 +1,13 @@
 /* 左侧导航栏的样式 */
-.aside{
-     width:200px;
+.aside {
+    width: 200px;
 }
 .aside-list {
-    position:fixed;
-    left:0;
-
+    position: fixed;
+    left: 0;
 }
 .aside .el-menu {
     height: 100vh;
-
 }
 /* 字体图标 */
 .aside i {
@@ -29,44 +27,189 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    width:1200px;
+    height: 60px;
+    width: 1200px;
     position: fixed;
     top: 0;
     background-color: #fff;
     z-index: 999;
-    padding: 10px 0;
+    padding: 5px 0;
 }
-.headerNav  img{
+.headerNav img {
     width: 100%;
-    height:60px;
-
+    height: 60px;
 }
 
 .header-search {
-    flex:1;
-    margin:0 10rem;
+    flex: 1;
+    margin: 0 10rem;
 }
 /* 按钮颜色 */
 .headerNav .el-input-group__append {
     background-color: var(--el-color-primary);
-    color:#fff
+    color: #fff;
 }
 .header-right .el-link {
     margin: 0 20px;
 }
 /* 伪类选择器：可以用来选择获取焦点的元素，当鼠标移上去后取消黑色边框 */
-.el-dropdown-link:focus{
-    outline:none;
+.el-dropdown-link:focus {
+    outline: none;
 }
 
 /* 区域展示部分 */
 .searchlist {
-    width:1200px;
-    display:grid;
-    grid-template-columns: repeat(5,auto);
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
 }
 .searchlist-item {
-    border:1px solid #dadada;
+    border: 1px solid #dadada;
     margin-left: -1px;
+}
+/* 目的地/酒店名称 */
+.search-box {
+    padding: 8px 12px;
+}
+
+.search-box label {
+    color: #999;
+    display: block;
+}
+
+.search-box input {
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+/* 伪类选择器，当元素获得焦点的时候，弄够控制父元素的样式 */
+.searchlist-item :focus-within {
+    outline: none;
+}
+
+.searchlist-item:focus-within {
+    border-bottom: 2px solid var(--el-color-primary);
+}
+
+.search-box .el-date-editor.el-input__wrapper {
+    box-shadow: none;
+}
+.search-box .el-date-editor.el-input__wrapper:hover {
+    box-shadow: none;
+}
+/* 搜索按钮 */
+.searchlist-item .el-button {
+    width: 100%;
+    height:100%;
+    border-radius: 0;
+}
+.searchlist-item .el-button .el-icon{
+    font-size:20px;
+}
+/* topfilter开始 */
+.topfilter {
+    width:1200px;
+    display: grid;
+    grid-template-columns: 119px 1fr;
+    grid-template-rows: repeat(3,auto);
+}
+.topfilter>div{
+    border-bottom: 1px solid #ddd;
+    padding: 0rem 0.5rem;
+}
+.topfilter h4{
+    line-height: 4rem;
+    text-align: center;
+    font-size: 12px;
+}
+.topfilter .el-button:hover {
+   background-color: var(--el-color-primary);
+   border: 1px solid var(--el-color-primary);
+}
+/* 按钮的间距 */
+.topfilter.el-main {
+    margin: 1000px;
+}
+/* 高级筛选 */
+.topfilter-filter .el-dropdown {
+    margin: 10px 15px;
+}
+/* 推荐酒店 */
+.recommend {
+    width:1200px;
+    display: flex;
+    gap: 0 20px;
+    padding: 10px 0;
+}
+
+.recommend-left {
+    width:780px;
+}
+.recommend-right {
+    width:400px;
+}
+/* 轮播图大小样式 */
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.recommend-list ul li {
+    display: flex;
+    background-color: #F4F6F8;
+    padding:10px;
+    margin-bottom:10px;
+}
+.list-left {
+    flex:2;
+    display: flex;
+}
+.list-right{
+    flex:1;
+    border-left:1px solid #ddd;
+    text-align: right;
+}
+/* 图片大小 */
+.list-left-img {
+    flex:1;
+}
+.list-left-img img{
+    width: 100%;
+}
+.list-left-title {
+    flex:3;
+    margin-left:10px;
+}
+/* 标题部分 */
+.list-left-tagandtitle {
+    font-size:16px;
+    line-height:2px;
+    display: flex;
+    margin-bottom:8px;
+    align-items:center;
+    
+}
+.list-left-tagandtitle img {
+    height:33px;
+    width:auto;
+    margin:0 10px;
+
+}
+.list-left-tagandtitle h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.list-left-title .list-left-transport p{
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+.badge-thumb{
+    background:url(@/assets/images/haoping.png) no-repeat;
+    width: 33px;
+    height:33px;
+}
+.list-left-tag .el-tag{
+    margin: 3px;
 }

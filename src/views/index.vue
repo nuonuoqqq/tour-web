@@ -10,6 +10,9 @@
         </el-header>
         <el-main>
           <Searchlist />
+          <Topfilter />
+          <!-- 推荐酒店 -->
+          <Recommend />
         </el-main>
       </el-container>
     </el-container>
@@ -17,13 +20,16 @@
     </template>
     
     <script setup>
+import {ref} from 'vue'
 import NavMenu from './navMenu.vue'
 import Header from './headerNav.vue'
 import Searchlist from './searchlist.vue'
+import Topfilter from './topfilter.vue'
+import Recommend from './recommend.vue'
     </script>
     
     
     <style scoped>
-    
+
     </style>
     
