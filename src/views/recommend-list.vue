@@ -25,6 +25,19 @@
                 </div>
                 <!-- 右侧 -->
                 <div class="list-right">
+                    <div class="list-right-comment">
+                        <div class="list-right-describe">
+                            <p>好</p>
+                            <a href="#">333条点评</a>
+                        </div>
+                        <div class="list-right-score">
+                        <p>4.5</p>
+                    </div>
+                    </div>
+                    <div class="list-right-price">
+                        <p>￥333</p>
+                        <el-button type="primary">查看详情</el-button>
+                    </div>
 
                 </div>
             </li>
